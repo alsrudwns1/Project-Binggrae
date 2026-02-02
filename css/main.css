@@ -472,9 +472,27 @@
 
 #container .main_container {
   background: url(../images/main/pc_section01_5.png) no-repeat center / cover;
-  padding: 180px 0;
+  padding: 140px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+#container .main_container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  pointer-events: none;
+}
+
+
 .logo_box .m_logo {
   display: none;
 }
