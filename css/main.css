@@ -687,6 +687,7 @@
   position: relative;
   display: block;
   border-radius: 30px;
+  transition: all 0.5s;
 }
 .main_product2 .swiper .swiper-slide .img_wrap .pc_slide2 {
   position: absolute;
@@ -714,7 +715,7 @@
 .main_product2 .swiper .swiper-slide:hover .hover_slide {
   opacity: 1;
   transform: translateY(-10%);
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 .main_product2 .swiper .swiper-slide:hover .hover_slide_btn {
   opacity: 1;
