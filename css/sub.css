@@ -402,8 +402,19 @@
 
   .board_write_wrap .col1 {
     width: 15%;
+    font-size: 12px;
+  }
+  .board_write_wrap .col_mid {
+    font-size: 12px;
+  }
+  .board_write_wrap .col_bottom {
+    font-size: 12px;
   }
   .board_write_wrap .name_input {
     width: 35%;
+  }
+  .board_write_wrap .file_btn {
+    font-size: 10px;
+    width: 60px;
   }
 }
