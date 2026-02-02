@@ -256,7 +256,7 @@
   z-index: 90;
   align-items: center;
   justify-content: center;
-  background: #fff url(./images/header/pc_ham_bg.png) no-repeat right top -80px;
+  background: #fff url(../images/header/pc_ham_bg.png) no-repeat right top -80px;
   visibility: hidden;
   opacity: 0;
   transition: all 0.3s;
