@@ -862,7 +862,6 @@
   padding: 55px 45px;
   border-radius: 30px;
   position: relative;
-  cursor: pointer;
 }
 .main_product3 .email_slide h3 {
   font-family: 'Binggrae', sans-serif;
@@ -1069,7 +1068,6 @@
   word-break: keep-all;
   display: block;
   position: relative;
-  cursor: pointer;
 }
 .main_product3 .online_slide p {
   font-size: 20px;
@@ -1105,7 +1103,6 @@
   word-break: keep-all;
   display: block;
   position: relative;
-  cursor: pointer;
 }
 .main_product3 .report_slide p {
   font-size: 20px;

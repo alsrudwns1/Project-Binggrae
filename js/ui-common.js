@@ -1,13 +1,14 @@
 $(function () {
-  // 스크롤 시 헤더 배경색 변경
+  // 스크롤 시 UI 상태 제어
   $(window).on("scroll", function () {
-    const sct = $(window).scrollTop();
+    const sct = $(this).scrollTop();
 
-    if (sct > 0) {
-      $(".header").addClass("on");
-    } else {
-      $(".header").removeClass("on");
-    }
+    // 헤더 배경색 변경
+    $(".header").toggleClass("on", sct > 0);
+
+    // 아래로 & 위로 버튼 전환
+    $(".down_top_btn .down_btn").css("display", sct > 0 ? "none" : "flex");
+    $(".down_top_btn .top_btn").css("display", sct > 0 ? "flex" : "none");
   });
 
   // 마우스 올려둘 시 헤더 배경색 변경
@@ -27,8 +28,7 @@ $(function () {
   });
 
   // 햄버거메뉴 클릭
-  $(".main_etc .hamberger").on("click", function (e) {
-    e.preventDefault();
+  $(".main_etc .hamberger").on("click", function () {
     $(this).toggleClass("check");
     $(".hamberger_menu").toggleClass("on");
     $("#header .main_gnb").toggleClass("hide");
@@ -36,15 +36,14 @@ $(function () {
     // 햄버거 메뉴 열림/닫힘에 따라 스크롤 제어
     if ($(this).hasClass("check")) {
       $("body").css("overflow-y", "hidden");
+      $(".header").removeClass("on");
     } else {
       $("body").css("overflow-y", "auto");
     }
   });
 
   // 햄버거메뉴 내 스크롤바 제거
-  $(function () {
-    $(".hm_menu2").css("overflow-y", "hidden");
-  });
+  $(".hm_menu2").css("overflow-y", "hidden");
 
   // 모바일 햄버거 메뉴에서 x버튼 클릭
   $(".hamberger_menu .hm_container .hm_close").on("click", function () {
@@ -57,29 +56,40 @@ $(function () {
     $("body").css("overflow-y", "auto");
   });
 
-  // 모바일 햄버거 메뉴 토글
-  if ($(window).width() < 1200) {
-    $(".hm_menu2 .depth01 > li").on("click", function (e) {
-      e.preventDefault();
+  function mobileMenuToggle() {
+    if ($(window).width() < 1200) {
+      // depth 여는 버튼만 토글
+      $(".hm_menu2 .depth01 > li > a")
+        .off("click")
+        .on("click", function (e) {
+          const $li = $(this).parent("li");
+          const $depth02 = $li.children(".depth02");
 
-      const $currentDepth = $(this).children(".depth02");
+          if ($depth02.length > 0) {
+            e.preventDefault();
+            $depth02.slideToggle();
+            $li.siblings().children(".depth02").slideUp();
+          }
+        });
 
-      // 내가 클릭한 메뉴 토글
-      $currentDepth.slideToggle();
-
-      // 클릭한 메뉴를 제외한 다른 메뉴들은 닫기
-      $(this).siblings().children(".depth02").slideUp();
-    });
+      $(".hm_menu2 .depth02 a").on("click", function (e) {
+        e.stopPropagation();
+      });
+    }
   }
 
+  $(window).on("resize", mobileMenuToggle);
+  mobileMenuToggle();
+
   // 검색창 클릭
-  $(".search_area #query").on("click", function () {
-    if ($(this).attr("placeholder") === "제품명을 입력해주세요") {
+  const $searchInput = $("#query");
+  $searchInput
+    .on("focus", function () {
       $(this).attr("placeholder", "");
-    } else {
+    })
+    .on("blur", function () {
       $(this).attr("placeholder", "제품명을 입력해주세요");
-    }
-  });
+    });
 
   let mainProduct = new Swiper(".main_product .swiper", {
     speed: 500,
@@ -174,28 +184,6 @@ $(function () {
       })
       .trigger("resize");
   }, 100);
-
-  $(".main_product3 .email_slide").on("click", function () {
-    location.href = "index.html";
-  });
-
-  $(".main_product3 .report_wrap .online_slide").on("click", function () {
-    location.href = "index.html";
-  });
-  $(".main_product3 .report_wrap .report_slide").on("click", function () {
-    location.href = "index.html";
-  });
-
-  $(window).on("scroll", function () {
-    let sct = $(window).scrollTop();
-    if (sct > 0) {
-      $(".down_top_btn .down_btn").css("display", "none");
-      $(".down_top_btn .top_btn").css("display", "flex");
-    } else {
-      $(".down_top_btn .top_btn").css("display", "none");
-      $(".down_top_btn .down_btn").css("display", "flex");
-    }
-  });
 
   $(".down_top_btn .top_btn").on("click", function (e) {
     e.preventDefault();
