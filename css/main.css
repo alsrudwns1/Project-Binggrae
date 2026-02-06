@@ -222,8 +222,13 @@
 }
 
 .main_etc .hamberger {
+  all: unset;
   width: 26px;
   height: 18px;
+}
+.hamburger:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 4px;
 }
 .main_etc .hamberger a span {
   display: block;
