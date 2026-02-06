@@ -547,11 +547,9 @@
   align-items: center;
   justify-content: center;
   margin-top: 25px;
-}
-.main_container .keyword_box a {
-  display: flex;
   gap: 0 10px;
 }
+
 .main_container .keyword_box .keyword {
   padding: 10px;
   font-size: 12px;
