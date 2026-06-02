@@ -203,7 +203,7 @@ $(function () {
 
   AOS.init({
     duration: 1000,
-    // 한번만 실행하게
-    //once: true
+    once: true,
+    mirror: false,
   });
 });
