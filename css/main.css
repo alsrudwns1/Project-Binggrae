@@ -1600,6 +1600,9 @@
     margin-bottom: 5px;
     width: 24px;
   }
+  .header_main .hover_box {
+    display: none;
+  }
 
   .main_container .logo_box .pc_logo {
     display: none;
