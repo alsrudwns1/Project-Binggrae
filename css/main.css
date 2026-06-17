@@ -8,6 +8,7 @@
   --gray-600: #000;
 }
 
+/* 헤더 */
 #header {
   position: fixed;
   top: 0;
@@ -188,7 +189,17 @@
   padding-right: 30px;
 }
 .main_etc .lang_wrap .lang {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
   cursor: pointer;
+  font: inherit;
+  color: inherit;
 }
 .main_etc .lang_lang {
   font-size: 16px;
@@ -221,16 +232,18 @@
   font-weight: 700;
 }
 
-.main_etc .hamberger {
+/* 햄버거 메뉴(삼선 메뉴) */
+.main_etc .hamburger {
   all: unset;
   width: 26px;
   height: 18px;
+  cursor: pointer;
 }
 .hamburger:focus-visible {
   outline: 2px solid #000;
   outline-offset: 4px;
 }
-.main_etc .hamberger a span {
+.main_etc .hamburger span {
   display: block;
   width: 100%;
   height: 2px;
@@ -238,22 +251,22 @@
   margin-bottom: 8px;
   transition: all 0.5s;
 }
-.main_etc .hamberger.check a span:nth-child(1) {
+.main_etc .hamburger.check span:nth-child(1) {
   transform: rotate(-45deg);
   margin-top: 8px;
   transition: all 0.5s;
 }
-.main_etc .hamberger.check a span:nth-child(2) {
+.main_etc .hamburger.check span:nth-child(2) {
   transform: rotate(45deg);
   margin-top: -9px;
   transition: all 0.5s;
 }
-.main_etc .hamberger.check a span:nth-child(3) {
+.main_etc .hamburger.check span:nth-child(3) {
   opacity: 0;
   transform: rotate(45deg);
 }
 
-.hamberger_menu {
+.hamburger_menu {
   display: flex;
   width: 100%;
   height: 100%;
@@ -268,26 +281,26 @@
   padding-top: 147px;
   align-items: flex-start;
 }
-.hamberger_menu.on {
+.hamburger_menu.on {
   visibility: visible;
   opacity: 1;
 }
-.hamberger_menu .hm_container {
+.hamburger_menu .hm_container {
   width: 100%;
 }
-.hamberger_menu .hm_menu1 .moblie_menu {
+.hamburger_menu .hm_menu1 .moblie_menu {
   display: none;
 }
-.hamberger_menu .hm_menu1 .hm_close {
+.hamburger_menu .hm_menu1 .hm_close {
   display: none;
 }
 
-.hamberger_menu .hm_menu2 .depth01 {
+.hamburger_menu .hm_menu2 .depth01 {
   display: flex;
   justify-content: center;
   margin-top: 85px;
 }
-.hamberger_menu .depth01 > li {
+.hamburger_menu .depth01 > li {
   width: 255px;
   border-radius: 30px;
   border: solid 1px rgba(224, 223, 226, 0.6);
@@ -296,7 +309,7 @@
   transition: transform 0.6s;
   margin-left: 10px;
 }
-.hamberger_menu .depth01 > li > a {
+.hamburger_menu .depth01 > li > a {
   display: flex;
   justify-content: flex-start;
   line-height: 1;
@@ -307,48 +320,49 @@
   font-family: 'Binggrae';
   white-space: nowrap;
 }
-.hamberger_menu .depth01 > li:hover {
+.hamburger_menu .depth01 > li:hover {
   box-shadow: 0px 5px 24.3px 2.7px rgba(0, 0, 0, 0.09);
   transform: translateY(-10px);
 }
-.hamberger_menu .depth01 > li:hover > a {
+.hamburger_menu .depth01 > li:hover > a {
   color: var(--point-color1);
   transition: all 0.5s;
 }
 
-.hamberger_menu .depth01 .m_menu_btn {
+.hamburger_menu .depth01 .m_menu_btn {
   display: none;
 }
-.hamberger_menu .depth02 > li + li {
+.hamburger_menu .depth02 > li + li {
   margin-top: 15px;
 }
-.hamberger_menu .depth02 > li > a {
+.hamburger_menu .depth02 > li > a {
   font-size: 18px;
   line-height: 1;
   display: block;
 }
 
-.hamberger_menu .depth02 > li:hover {
+.hamburger_menu .depth02 > li:hover {
   background: url(../images/header/pc_ham_hover_img.png) no-repeat right top 2px;
 }
-.hamberger_menu .depth02 > li:hover > a {
+.hamburger_menu .depth02 > li:hover > a {
   color: var(--point-color1);
   transition: all 0.3s;
 }
 
-.hamberger_menu .hm_menu2 .depth02 .FAQ {
+.hamburger_menu .hm_menu2 .depth02 .FAQ {
   padding-top: 15px;
 }
-.hamberger_menu .hm_menu2 .depth02 .FAQ > li > a {
+.hamburger_menu .hm_menu2 .depth02 .FAQ > li > a {
   color: gray;
   font-size: 15px;
   line-height: 30px;
 }
 
-.hamberger_menu .hm_menu3 {
+.hamburger_menu .hm_menu3 {
   display: none;
 }
 
+/* 탑, 로그인, 게시판 버튼 (사이드 메뉴) */
 .sidemenu_wrap {
   justify-items: center;
   position: fixed;
@@ -475,6 +489,7 @@
   font-size: 14px;
 }
 
+/* 메인 비주얼 */
 #container .main_container {
   background: url(../images/main/pc_section01_5.png) no-repeat center / cover;
   padding: 140px 0;
@@ -496,12 +511,9 @@
   );
   pointer-events: none;
 }
-
-
 .logo_box .m_logo {
   display: none;
 }
-
 .main_container .search_area {
   max-width: 1020px;
   height: 80px;
@@ -511,7 +523,6 @@
   margin: 40px auto 0;
   justify-content: space-between;
 }
-
 .main_container .search_wrap {
   display: flex;
   padding: 0 15px 0 55px;
@@ -520,7 +531,6 @@
   width: 100%;
   align-items: center;
 }
-
 .main_container .search_wrap input[type='search'] {
   width: 78%;
   height: 100%;
@@ -546,7 +556,6 @@
   background: linear-gradient(0deg, #ed1c24, #e0462e);
   border: none;
 }
-
 .main_container .keyword_box {
   display: flex;
   align-items: center;
@@ -554,7 +563,6 @@
   margin-top: 25px;
   gap: 0 10px;
 }
-
 .main_container .keyword_box .keyword {
   padding: 10px;
   font-size: 12px;
@@ -565,6 +573,7 @@
   font-family: 'binggrae';
 }
 
+/* 행복한 빙그레의 맛 슬라이더 */
 .main_product {
   background: url(../images/main/pc_slider_section.jpg) no-repeat center / cover;
   margin-bottom: 140px;
@@ -586,10 +595,7 @@
   text-align: left;
   color: #1f1f1f;
   text-align: center;
-  /* hover 효과 */
-  /* margin-bottom: 40px; */
 }
-
 .main_product .swiper {
   max-width: 1570px;
 }
@@ -600,7 +606,6 @@
   width: 100%;
   height: 100%;
 }
-
 .main_product .swiper .swiper-slide .txt_wrap {
   display: flex;
   align-items: center;
@@ -625,7 +630,6 @@
   opacity: 1;
   z-index: 10;
 }
-
 .main_product .swiper-button-disabled {
   opacity: 0.1 !important;
 }
@@ -668,8 +672,7 @@
   font-weight: 500;
 }
 
-/* 슬라이더 2 */
-
+/* 브랜드 샵 슬라이더 */
 .main_product2 {
   background: url(../images/main/pc_slider_section.jpg) no-repeat center / cover;
   margin-bottom: 140px;
@@ -690,15 +693,13 @@
   letter-spacing: -1.9px;
   color: #1f1f1f;
   text-align: center;
-  /* hover 효과 */
-  /* margin-bottom: 40px; */
 }
 
 .main_product2 .swiper {
   max-width: 1570px;
 }
 .main_product2 .swiper .swiper-wrapper {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 
 .main_product2 .swiper .swiper-slide {
@@ -709,6 +710,10 @@
   display: block;
   border-radius: 30px;
   transition: all 0.5s;
+}
+.main_product2 .swiper .swiper-slide .img_wrap img {
+  width: 100%;
+  display: block;
 }
 .main_product2 .swiper .swiper-slide .img_wrap .pc_slide2 {
   position: absolute;
@@ -825,6 +830,7 @@
   transition: transform 1s ease, opacity 1s ease;
 }
 
+/* 고객문의 및 불편사항 */
 .main_product3 {
   padding-bottom: 140px;
 }
@@ -1130,6 +1136,7 @@
   font-weight: 500;
 }
 
+/* 푸터 */
 #footer {
   padding: 40px 50px 30px;
   background-color: #1b1b1b;
@@ -1228,17 +1235,17 @@
     right: 30px;
   }
 
-  .hamberger_menu .hm_menu2 .depth01 {
+  .hamburger_menu .hm_menu2 .depth01 {
     white-space: nowrap;
     width: 95%;
     margin: 0 auto;
     margin-top: 120px;
   }
-  .hamberger_menu .hm_menu2 .depth01 > li > a {
+  .hamburger_menu .hm_menu2 .depth01 > li > a {
     font-size: 20px;
     padding-bottom: 20px;
   }
-  .hamberger_menu .hm_menu2 .depth02 > li > a {
+  .hamburger_menu .hm_menu2 .depth02 > li > a {
     font-size: 14px;
   }
   .main_product .inner {
@@ -1277,7 +1284,7 @@
     margin-top: 1px;
   }
 
-  .main_etc .hamberger {
+  .main_etc .hamburger {
     margin-top: 2px;
   }
   .main_etc .lang_btn {
@@ -1288,12 +1295,12 @@
     margin: 40px 40px auto 40px ;
   }
 
-  .hamberger_menu {
+  .hamburger_menu {
     padding-top: 0;
     height: 100%;
   }
 
-  .hamberger_menu.on {
+  .hamburger_menu.on {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -1304,12 +1311,12 @@
     background: rgba(0, 0, 0, 0.1);
     overflow: hidden;
   }
-  .hamberger_menu .ham_bg {
+  .hamburger_menu .ham_bg {
     width: calc(99.999% - 500px);
     height: 100%;
     float: left;
   }
-  .hamberger_menu .hm_container {
+  .hamburger_menu .hm_container {
     background-color: #fff;
     width: 500px;
     height: 100%;
@@ -1317,7 +1324,7 @@
     border-top-left-radius: 30px;
     position: relative;
   }
-  .hamberger_menu .hm_menu1 {
+  .hamburger_menu .hm_menu1 {
     padding: 20px;
     border-bottom: solid 1px rgba(0, 0, 0, 0.1);
     justify-content: space-between;
@@ -1325,12 +1332,12 @@
     align-items: center;
   }
 
-  .hamberger_menu .hm_menu1 .moblie_menu {
+  .hamburger_menu .hm_menu1 .moblie_menu {
     display: flex;
     justify-content: flex-start;
     line-height: 25px;
   }
-  .hamberger_menu .hm_menu1 .moblie_menu > li > a {
+  .hamburger_menu .hm_menu1 .moblie_menu > li > a {
     height: 36px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 17px;
@@ -1339,85 +1346,84 @@
     align-items: center;
     justify-content: center;
   }
-  .hamberger_menu .hm_menu1 .moblie_menu > li > a > span {
+  .hamburger_menu .hm_menu1 .moblie_menu > li > a > span {
     font-size: 15px;
     font-weight: 500;
   }
-  .hamberger_menu .hm_menu1 .moblie_menu > li > a > img {
+  .hamburger_menu .hm_menu1 .moblie_menu > li > a > img {
     margin-left: 4px;
   }
-  .hamberger_menu .hm_menu1 .moblie_menu li + li {
+  .hamburger_menu .hm_menu1 .moblie_menu li + li {
     margin-left: 6px;
   }
-  .hamberger_menu .hm_menu1 .hm_close {
+  .hamburger_menu .hm_menu1 .hm_close {
     display: block;
     width: 22px;
     border: none;
     background: white;
   }
-  .hamberger_menu .hm_menu1 .hm_close > img {
+  .hamburger_menu .hm_menu1 .hm_close > img {
     max-width: 100%;
     vertical-align: top;
   }
-  .hamberger_menu .hm_menu2 {
+  .hamburger_menu .hm_menu2 {
     height: calc(99.99% - 148px);
     background-color: #fff;
     line-height: 25px;
     overflow-y: scroll;
   }
-  .hamberger_menu .hm_menu2 .depth01 {
+  .hamburger_menu .hm_menu2 .depth01 {
     padding: 11px 0 30px;
     width: 100%;
-    /* height: 100%; */
     margin: 0 0;
     flex-direction: column;
     transition: all 0.5s;
   }
-  .hamberger_menu .hm_menu2 .depth01 > li {
+  .hamburger_menu .hm_menu2 .depth01 > li {
     width: auto;
     height: auto;
     padding: 0;
     border: 0;
     margin-left: 0;
   }
-  .hamberger_menu .hm_menu2 .depth01 > li > a {
+  .hamburger_menu .hm_menu2 .depth01 > li > a {
     padding: 11px 20px 11px 38px;
     justify-content: space-between;
     font-size: 21px;
     font-weight: 700;
   }
-  .hamberger_menu .depth01 > li:hover {
+  .hamburger_menu .depth01 > li:hover {
     box-shadow: none;
     transform: none;
   }
-  .hamberger_menu .depth01 > li:hover > a {
+  .hamburger_menu .depth01 > li:hover > a {
     color: black;
     transition: none;
   }
-  .hamberger_menu .hm_menu2 .depth01 .m_menu_btn {
+  .hamburger_menu .hm_menu2 .depth01 .m_menu_btn {
     width: 9px;
     height: 4.25px;
     display: block;
   }
-  .hamberger_menu .hm_menu2 .depth01 .flex6 .FAQ {
+  .hamburger_menu .hm_menu2 .depth01 .flex6 .FAQ {
     display: none;
   }
-  .hamberger_menu .hm_menu2 .depth02 {
+  .hamburger_menu .hm_menu2 .depth02 {
     display: none;
     padding: 11px 20px 11px 38px;
     background-color: #f7f7f7;
   }
-  .hamberger_menu .hm_menu2 .depth02 > li {
+  .hamburger_menu .hm_menu2 .depth02 > li {
     padding: 7px 0;
     margin: 0;
     display: flex;
     align-items: flex-start;
   }
-  .hamberger_menu .hm_menu2 .depth02 > li > a {
+  .hamburger_menu .hm_menu2 .depth02 > li > a {
     color: #707070;
     font-size: 16px;
   }
-  .hamberger_menu .hm_menu2 .depth02 .m_circle {
+  .hamburger_menu .hm_menu2 .depth02 .m_circle {
     display: block;
     width: 3px;
     height: 3px;
@@ -1427,14 +1433,14 @@
     opacity: 0;
     transition: all 0.5s;
   }
-  .hamberger_menu .hm_menu2 .depth02 > li:hover .m_circle {
+  .hamburger_menu .hm_menu2 .depth02 > li:hover .m_circle {
     opacity: 1;
   }
-  .hamberger_menu .hm_menu2 .depth02 > li:hover > a {
+  .hamburger_menu .hm_menu2 .depth02 > li:hover > a {
     color: var(--point-color1);
   }
 
-  .hamberger_menu .hm_menu3 {
+  .hamburger_menu .hm_menu3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1446,25 +1452,25 @@
     line-height: 1;
     background: #fff;
   }
-  .hamberger_menu .hm_menu3 .m_lang {
+  .hamburger_menu .hm_menu3 .m_lang {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .hamberger_menu .hm_menu3 .m_lang .lang_kr > a {
+  .hamburger_menu .hm_menu3 .m_lang .lang_kr > a {
     color: var(--gray-600);
     font-weight: 500;
   }
-  .hamberger_menu .hm_menu3 .m_lang .lang_en > a {
+  .hamburger_menu .hm_menu3 .m_lang .lang_en > a {
     color: rgba(31, 31, 31, 0.3);
     font-size: 16px;
     font-weight: 500;
   }
-  .hamberger_menu .hm_menu3 .m_lang li + li {
+  .hamburger_menu .hm_menu3 .m_lang li + li {
     padding-left: 20px;
     position: relative;
   }
-  .hamberger_menu .hm_menu3 .m_lang li + li::before {
+  .hamburger_menu .hm_menu3 .m_lang li + li::before {
     content: '';
     display: block;
     width: 1px;
@@ -1476,7 +1482,7 @@
     transform: translateY(-50%);
   }
 
-  .hamberger_menu .hm_menu3 > a {
+  .hamburger_menu .hm_menu3 > a {
     color: #707070;
     font-size: 16px;
     font-weight: 500;
@@ -1593,10 +1599,10 @@
   .main_etc .lang_btn {
     margin-left: 3px;
   }
-  .main_etc .hamberger {
+  .main_etc .hamburger {
     margin-top: 0;
   }
-  .main_etc .hamberger a span {
+  .main_etc .hamburger a span {
     margin-bottom: 5px;
     width: 24px;
   }
@@ -1641,10 +1647,10 @@
     white-space: nowrap;
   }
 
-  .hamberger_menu .ham_bg {
+  .hamburger_menu .ham_bg {
     width: 10%;
   }
-  .hamberger_menu .hm_container {
+  .hamburger_menu .hm_container {
     width: 90%;
   }
 
@@ -1662,14 +1668,13 @@
   .main_product .inner .product_tit {
     font-size: 22px;
   }
-
+  .main_product .swiper {
+    padding-bottom: 30px;
+  }
   .main_product .swiper .swiper-wrapper .swiper-slide {
     height: auto;
   }
 
-  .main_product .swiper .bottom_slide {
-    margin-top: 14px;
-  }
   .main_product .swiper .swiper-slide .txt_wrap {
     height: auto;
     background: none;
@@ -1699,6 +1704,7 @@
     justify-content: center;
     width: 100%;
     padding: 0;
+    bottom: 0;
   }
   .main_product .swiper-pagination-bullet {
     display: block;
@@ -1745,6 +1751,14 @@
   .main_product2 .product2_tit {
     font-size: 22px;
   }
+  .main_product2 .swiper {
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 30px;
+    }
+  .main_product2 .swiper-wrapper {
+    align-items: stretch;
+  }
   .main_product2 .swiper .swiper-wrapper .swiper-slide {
     height: auto;
     border: solid 1px rgba(224, 223, 226, 0.6);
@@ -1754,7 +1768,7 @@
     box-shadow: none;
     transition: none;
   }
-
+  
   .main_product2 .swiper .swiper-slide:hover .img_wrap {
     transform: none;
     transition: none;
@@ -1783,6 +1797,7 @@
     justify-content: center;
     width: 100%;
     padding: 0;
+    bottom: 0;
   }
   .main_product2 .swiper-pagination-bullet {
     display: block;

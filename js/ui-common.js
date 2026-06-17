@@ -28,9 +28,9 @@ $(function () {
   });
 
   // 햄버거메뉴 클릭
-  $(".main_etc .hamberger").on("click", function () {
+  $(".main_etc .hamburger").on("click", function () {
     $(this).toggleClass("check");
-    $(".hamberger_menu").toggleClass("on");
+    $(".hamburger_menu").toggleClass("on");
     $("#header .main_gnb").toggleClass("hide");
 
     // 햄버거 메뉴 열림/닫힘에 따라 스크롤 제어
@@ -46,13 +46,13 @@ $(function () {
   $(".hm_menu2").css("overflow-y", "hidden");
 
   // 모바일 햄버거 메뉴에서 x버튼 클릭
-  $(".hamberger_menu .hm_container .hm_close").on("click", function () {
-    $(".hamberger_menu.on").removeClass("on");
-    $(".main_etc .hamberger.check").removeClass("check");
+  $(".hamburger_menu .hm_container .hm_close").on("click", function () {
+    $(".hamburger_menu.on").removeClass("on");
+    $(".main_etc .hamburger.check").removeClass("check");
   });
 
   // 모바일 햄버거메뉴 닫기 눌렀을 때 스크롤 제어
-  $(".hamberger_menu .hm_menu1 .hm_close").on("click", function () {
+  $(".hamburger_menu .hm_menu1 .hm_close").on("click", function () {
     $("body").css("overflow-y", "auto");
   });
 
@@ -71,7 +71,6 @@ $(function () {
             $li.siblings().children(".depth02").slideUp();
           }
         });
-
       $(".hm_menu2 .depth02 a").on("click", function (e) {
         e.stopPropagation();
       });
@@ -91,21 +90,21 @@ $(function () {
       $(this).attr("placeholder", "제품명을 입력해주세요");
     });
 
+  // 행복한 빙그레의 맛 슬라이더
   let mainProduct = new Swiper(".main_product .swiper", {
     speed: 500,
     slidesPerView: 3,
     grid: {
       rows: 2,
+      fill: "row",
     },
-
     spaceBetween: 18,
-    allowTouchMove: true,
-
+    observer: true,
+    observeParents: true,
     pagination: {
       clickable: true,
       el: ".swiper-pagination",
     },
-
     navigation: {
       nextEl: ".main_product .swiper-button-next",
       prevEl: ".main_product .swiper-button-prev",
@@ -126,32 +125,21 @@ $(function () {
     },
   });
 
-  $(window)
-    .on("resize", function () {
-      if ($(this).outerWidth() <= 767) {
-        let h = $(".main_product .swiper-slide").outerHeight() * 2 + 100;
-        $(".main_product .swiper").outerHeight(h);
-      } else {
-        $(".main_product .swiper").outerHeight("auto");
-      }
-    })
-    .trigger("resize");
-
+  // 브랜드 숍 슬라이더
   let mainProduct2 = new Swiper(".main_product2 .swiper", {
     speed: 500,
     slidesPerView: 3,
     grid: {
       rows: 2,
+      fill: "row",
     },
-
     spaceBetween: 18,
-    allowTouchMove: true,
-
+    observer: true,
+    observeParents: true,
     pagination: {
+      el: ".main_product2 .swiper-pagination",
       clickable: true,
-      el: ".swiper-pagination",
     },
-
     navigation: {
       nextEl: ".main_product2 .swiper-button-next",
       prevEl: ".main_product2 .swiper-button-prev",
@@ -172,19 +160,7 @@ $(function () {
     },
   });
 
-  setTimeout(() => {
-    $(window)
-      .on("resize", function () {
-        if ($(this).outerWidth() <= 767) {
-          let h = $(".main_product2 .swiper-slide").outerHeight() * 2 + 100;
-          $(".main_product2 .swiper").outerHeight(h);
-        } else {
-          $(".main_product2 .swiper").outerHeight("auto");
-        }
-      })
-      .trigger("resize");
-  }, 100);
-
+  // 탑버튼
   $(".down_top_btn .top_btn").on("click", function (e) {
     e.preventDefault();
     window.scrollTo({
@@ -192,7 +168,6 @@ $(function () {
       behavior: "smooth",
     });
   });
-
   $(".down_top_btn .down_btn").on("click", function (e) {
     e.preventDefault();
     window.scrollTo({
@@ -202,8 +177,9 @@ $(function () {
   });
 
   AOS.init({
-    duration: 1000,
+    duration: 800,
     once: true,
     mirror: false,
+    easing: "ease-out",
   });
 });

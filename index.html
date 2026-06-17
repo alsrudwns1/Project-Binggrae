@@ -6,39 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <meta name="description" content="다양한 맛과 행복으로 모두 하나되는 세상" />
-  <!-- <meta name="viewport" content="width=1004" />  --> 
 
   <title>빙그레반응형</title>
 
-  <!-- 파비콘 -->
   <link rel="icon" href="./images/common/favicon.ico" />
-  <link rel="apple-touch-icon-precomposed" href="./images/common/favicon.ico" />
-
   <meta property="og:title" content="빙그레" />
   <meta property="og:description" content="다양한 맛과 행복으로 모두 하나되는 세상." />
-  <meta property="og:image" content="http://alsrudwns.dothome.co.kr/test/images/og_img_binggrae.jpg" />
-  <meta property="og:url" content="http://alsrudwns.dothome.co.kr/test/">
+  <meta property="og:type" content="website">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
   <!-- 라이브러리는 먼저 연결함 -->
   <link rel="stylesheet" href="css/jquery-ui.min.css">
   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel ="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="css/aos.css">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/sub.css">
-  
+
   <script src="js/jquery-3.7.1.min.js"></script>
   <script src="js/jquery-ui.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/aos.js"></script>
   <script src="js/ui-common.js"></script>
-  
-  <style></style>
 </head>
 
 <body>
@@ -52,13 +47,13 @@
           <li>
             <a href="#" target="_blank" class="flex_item1">
               <span>구매포털시스템</span>
-              <img src="./images/header/link_arrow.png" alt="구매">
+              <img src="./images/header/link_arrow.png" alt="구매포털시스템">
             </a>
           </li>
           <li>
             <a href="#" target="_blank" class="flex_item2">
               <span>인재채용</span>
-              <img src="./images/header/link_arrow.png" alt="구매">
+              <img src="./images/header/link_arrow.png" alt="인재채용">
             </a>
           </li>
         </ul>
@@ -66,8 +61,8 @@
       <div class="header_main">
         <h2 class="main_logo">
           <a href="index.html">
-            <img src="./images/header/logo-pc.png" alt="logo" class="pc_logo">
-            <img src="./images/header/m_logo.png" alt="m_logo" class="m_logo">
+            <img src="./images/header/logo-pc.png" alt="빙그레 로고" class="pc_logo">
+            <img src="./images/header/m_logo.png" alt="빙그레 로고 모바일" class="m_logo">
           </a>
         </h2>
         <div class="main_gnb">
@@ -78,7 +73,7 @@
                 <a href="#">회사소개</a>
                 <ul class="depth2">
                   <li>
-                    <a href="release-list.html">CEO인사말</a>
+                    <a href="html/release-list.html">CEO인사말</a>
                   </li>
                   <li>
                     <a href="#">경영이념</a>
@@ -176,7 +171,7 @@
                     <a href="#">새소식</a>
                   </li>
                   <li>
-                    <a href="release-list.html">보도자료</a>
+                    <a href="html/release-list.html">보도자료</a>
                   </li>
                   <li>
                     <a href="#">빙그레스토리</a>
@@ -211,17 +206,15 @@
         </div>
         <div class="main_etc">
           <div class="lang_wrap">
-            <p class="lang">
+            <button class="lang">
               <span class="lang_lang">KR</span>
-              <span class="lang_btn"><img src="./images/header/lang_btn.png" alt="lang"></span>
-            </p>
+              <span class="lang_btn"><img src="./images/header/lang_btn.png" alt="언어변경"></span>
+            </button>
           </div>
-          <button class="hamberger">
-            <a href="#">
-              <span></span>
-              <span></span>
-              <span></span>
-            </a>
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
           <ul class="lang_menu">
             <li><a href="#">KR</a></li>
@@ -231,7 +224,7 @@
       </div>
     </header>
 
-    <nav class="hamberger_menu">
+    <nav class="hamburger_menu">
       <div class="ham_bg"></div>
       <div class="hm_container">
         <div class="hm_menu1">
@@ -239,18 +232,18 @@
             <li>
               <a href="#" target="_blank" class="m_flex_item1">
                 <span>구매포털시스템</span>
-                <img src="./images/header/link_arrow.png" alt="모바일메뉴">
+                <img src="./images/header/link_arrow.png" alt="모바일 구매포털">
               </a>
             </li>
             <li>
               <a href="#" target="_blank" class="m_flex_item2">
                 <span>인재채용</span>
-                <img src="./images/header/link_arrow.png" alt="모바일메뉴2">
+                <img src="./images/header/link_arrow.png" alt="모바일 인재채용">
               </a>
             </li>
           </ul>
           <button class="hm_close">
-            <img src="./images/header/ham_close.png" alt="엑스">
+            <img src="./images/header/ham_close.png" alt="닫기버튼">
           </button>
         </div>
         <div class="hm_menu2">
@@ -262,7 +255,7 @@
               </a>
               <ul class="depth02">
                 <li>
-                  <a href="release-list.html">CEO인사말</a>
+                  <a href="html/release-list.html">CEO인사말</a>
                   <span class="m_circle"></span>
                 </li>
                 <li>
@@ -406,7 +399,7 @@
                   <span class="m_circle"></span>
                 </li>
                 <li>
-                  <a href="release-list.html">보도자료</a>
+                  <a href="html/release-list.html">보도자료</a>
                   <span class="m_circle"></span>
                 </li>
                 <li>
@@ -470,10 +463,10 @@
           <p class="help_message">무엇을 도와드릴까요?</p>
         </div>
         <div class="login_btn_wrap">
-          <a href="login.html" class="login_btn">로그인</a>
+          <a href="html/login.html" class="login_btn">로그인</a>
         </div>
         <div class="board_btn_wrap">
-          <a href="release-list.html" target="_blank" class="board_btn">게시판</a>
+          <a href="html/release-list.html" target="_blank" class="board_btn">게시판</a>
         </div>
         <div class="down_top_btn">
           <button class="down_btn">
@@ -493,26 +486,26 @@
           <img src="images/main/sec01_logo_5.png" alt="메인로고" class="pc_logo">
           <img src="images/main/m_sec01_logo_5.png" alt="메인로고" class="m_logo">
         </div>
-          <div class="search_area">
-            <form>
-              <fieldset>
-                <legend>검색</legend>
-                <div class="search_wrap">
-                  <input type="search" id="query" title="제품명을 입력해주세요" placeholder="제품명을 입력해주세요" autocomplete="off">
-                  <button type="submit" class="search_btn">
-                    <span>SEARCH</span>
-                  </button>
-                </div>
-              </fieldset>
-            </form>
-          </div>
-          <ul class="keyword_box">
-            <li class="keyword"><a href="#">#바나나맛우유</a></li>
-            <li class="keyword"><a href="#">#더단백</a></li>
-            <li class="keyword"><a href="#">#슈퍼콘</a></li>
-            <li class="keyword"><a href="#">#요플레</a></li>
-            <li class="keyword"><a href="#">#아카페라</a></li>
-          </ul>
+        <div class="search_area">
+          <form>
+            <fieldset>
+              <legend>검색</legend>
+              <div class="search_wrap">
+                <input type="search" id="query" title="제품명을 입력해주세요" placeholder="제품명을 입력해주세요" autocomplete="off">
+                <button type="submit" class="search_btn">
+                  <span>SEARCH</span>
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <ul class="keyword_box">
+          <li class="keyword"><a href="#">#바나나맛우유</a></li>
+          <li class="keyword"><a href="#">#더단백</a></li>
+          <li class="keyword"><a href="#">#슈퍼콘</a></li>
+          <li class="keyword"><a href="#">#요플레</a></li>
+          <li class="keyword"><a href="#">#아카페라</a></li>
+        </ul>
       </section>
       <section class="main_product">
         <div class="inner">
@@ -534,7 +527,7 @@
                   </div>
                 </a>
               </div>
-              <div class="swiper-slide bottom_slide">
+              <div class="swiper-slide">
                 <a href="#">
                   <div class="img_wrap">
                     <img src="images/main/milk.png" alt="유제품">
@@ -567,7 +560,7 @@
                   </div>
                 </a>
                 <a href="#">
-                  <div class="txt_wrap bottom_slide">
+                  <div class="txt_wrap">
                     <span>커피</span>
                     <span class="hover_txt">VIEW MORE</span>
                   </div>
@@ -586,7 +579,7 @@
                   </div>
                 </a>
               </div>
-              <div class="swiper-slide bottom_slide">
+              <div class="swiper-slide">
                 <a href="#">
                   <div class="img_wrap">
                     <img src="images/main/drink.png" alt="음료 제품군">
@@ -612,7 +605,7 @@
                   </div>
                 </a>
               </div>
-              <div class="swiper-slide bottom_slide">
+              <div class="swiper-slide">
                 <a href="#">
                   <div class="img_wrap">
                     <img src="images/main/health.png" alt="건강 관련 제품군">
@@ -763,9 +756,9 @@
         </div>
       </section>
       <section class="main_product3">
-        <div class="inner" >
-          <h2 class="product3_tit" data-aos="fade-up">고객문의 및 불편사항</h2>
-          <div class="qna_wrap" data-aos="fade-up">
+        <div class="inner">
+          <h2 class="product3_tit">고객문의 및 불편사항</h2>
+          <div class="qna_wrap">
             <div class="counsol_wrap">
               <div class="email_slide">
                 <h3>이메일 상담</h3>
@@ -774,7 +767,7 @@
                   문의해주세요<br>
                 </p>
                 <span>
-                   최대한 빠른 시일 내에<br class="m_br">
+                  최대한 빠른 시일 내에<br class="m_br">
                   친절하게 답변해드리겠습니다.
                 </span>
                 <a href="#" class="email_btn">
@@ -784,7 +777,7 @@
                 </a>
               </div>
               <div class="phone_slide">
-               <h3>전화 상담</h3>
+                <h3>전화 상담</h3>
                 <p class="phone_num">080.022.0056</p>
                 <p class="time">월~금(공휴일 제외)
                   <span>09:00~17:30</span>
@@ -861,7 +854,7 @@
               </li>
             </ul>
           </div>
-          <div class="report_wrap" data-aos="fade-up">
+          <div class="report_wrap">
             <h2 class="report_tit">
               빙그레 임직원 및 종사자 온라인제보
             </h2>
@@ -888,11 +881,11 @@
         </div>
         <ul class="footer_top_right">
           <li><a href="#">개인정보처리방침</a></li>
-          <li><a href="#">오시는길</a></li>                    
+          <li><a href="#">오시는길</a></li>
         </ul>
       </div>
       <div class="footer_main">
-        <div class="footer_main_wrap"> 
+        <div class="footer_main_wrap">
           <ul>
             <li>
               <span class="company_name">회사명 : </span>
@@ -900,7 +893,7 @@
             </li>
             <li>
               <span class="footer_address">경기도 남양주시 다산동 4344-3 / 경기도 남양주시 다산순환로 45(다산동)</span>
-            </li>           
+            </li>
           </ul>
         </div>
       </div>
@@ -912,35 +905,33 @@
             <ul>
               <li>
                 <a href="#" target="_blank">
-                  <img
-                    src="./images/footer/blog.png" alt="blog"></a>
+                  <img src="./images/footer/blog.png" alt="blog"></a>
               </li>
               <li>
                 <a href="#" target="_blank">
-                  <img
-                    src="./images/footer/instar.png" alt="instar"></a>
+                  <img src="./images/footer/instar.png" alt="instar"></a>
               </li>
               <li>
                 <a href="#" target="_blank">
-                  <img
-                    src="./images/footer/youtube.png" alt="youtube"></a>
+                  <img src="./images/footer/youtube.png" alt="youtube"></a>
               </li>
               <li>
                 <a href="#" target="_blank">
                   <img src="./images/footer/ttt.png" alt="ttt"></a>
               </li>
             </ul>
-          </div>     
+          </div>
         </div>
       </div>
       <div class="footer_m_bottom">
         <ul>
           <li><a href="#">고객센터</a></li>
-          <li><a href="#">1:1이메일문의</a></li>                           
+          <li><a href="#">1:1이메일문의</a></li>
         </ul>
         <p class="m_copyright">ⓒ Binggrae all rights reserved.</p>
       </div>
     </footer>
   </div>
 </body>
+
 </html>
